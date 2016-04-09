@@ -60,6 +60,40 @@
 <p>If you should find the atlas useful, please reference it using information at the following URL:
 <a href="http://www.spl.harvard.edu/publications/item/view/1265">http://www.spl.harvard.edu/publications/item/view/1265</a> .</p>
 
+<h2>
+<a id="using-the-online-viewer" class="anchor" href="#using-the-online-viewer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the online viewer</h2>
+
+<p><img src="viewer_screenshot.png" alt="viewer screenshot" title="Viewer"></p>
+
+<h3>
+<a id="without-installation" class="anchor" href="#without-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Without installation</h3>
+
+<p>You can <a href="https://stity.github.io/spl-brain-atlas/utils/three">see the latest release here</a></p>
+
+<h3>
+<a id="installing-from-the-git-repository" class="anchor" href="#installing-from-the-git-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing from the git repository</h3>
+
+<ul>
+<li>first pull the whole reposity by running : 
+<code>git clone https://github.com/stity/spl-brain-atlas.git</code>
+</li>
+<li>make sure that the submodules are up-to-date : </li>
+</ul>
+
+<pre><code>    cd utils/three
+    git pull origin master
+    cd ../mrmlToJson
+    git pull origin master
+</code></pre>
+
+<ul>
+<li>follow the instructions given by the <code>utils/mrmlToJson/README.md</code> starting from copying the config file</li>
+<li>follow the intructions given by the <code>utils/three/README.md</code> starting from copying the config file</li>
+<li>run a local server at the root of the cloned repository (you can achieve that by running <code>npm install -g http-server</code> and then <code>http-server</code>)</li>
+<li>use a browser to go to this address : <a href="http://localhost:8080/utils/three">http://localhost:8080/utils/three</a>
+</li>
+</ul>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/stity/spl-brain-atlas">Spl-brain-atlas</a> is maintained by <a href="https://github.com/stity">stity</a>.</span>
 

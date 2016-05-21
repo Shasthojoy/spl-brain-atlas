@@ -4,6 +4,11 @@ module.exports = {
     colorTableFileLocation : "../../slicer/colortables/hncma-atlas-lut.ctbl",
     vtkFilesDirectory : "../../slicer/models/",
     jsonResultFileName : "../atlasStructure.json",
+    filesDisplayName : {
+        "../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd" : "T1",
+        "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd" : "T2",
+        "../../slicer/volumes/labels/hncma-atlas.nrrd" : "Label Map",
+    },
     header : {
         "@type": "header",
         "species": "human",

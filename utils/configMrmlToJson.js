@@ -4,13 +4,14 @@ module.exports = {
     colorTableFileLocation : "../../slicer/colortables/hncma-atlas-lut.ctbl",
     vtkFilesDirectory : "../../slicer/models/",
     jsonResultFileName : "../atlasStructure.json",
+    jsonLDResultFileName : "../atlasStructureLD.json",
     filesDisplayName : {
         "../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd" : "T1",
         "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd" : "T2",
         "../../slicer/volumes/labels/hncma-atlas.nrrd" : "Label Map",
     },
     header : {
-        "@type": "header",
+        "@type": "Header",
         "species": "human",
         "organ": "brain",
         "name" : "The SPL/NAC Brain Atlas",
@@ -19,8 +20,8 @@ module.exports = {
         "version" : "1",
         "contact" : "https://github.com/stity/spl-brain-atlas",
         "comment" : "",
-        "coordinate_system" : "self defined",
-        "roots" : []
+        "coordinateSystem" : "self defined",
+        "root" : []
     },
     labelMapFiles : [{ 
         name : "../../slicer/volumes/labels/hncma-atlas.nrrd",
@@ -30,6 +31,30 @@ module.exports = {
         name : "../../slicer/volumes/labels/skin.nrrd",
         includes : [3]
     }*/],
-    "backgroundImages" : ["../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd", "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd"]
+    "backgroundImages" : ["../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd", "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd"],
+    "@context" : { // for JSON LD compatibility, specify places where aplication expect a reference
+        "@vocab": "http://www.openanatomy.org/schema/v1/#",
+        "backgroundImage": {
+            "@type": "@id"
+        },
+        "root": {
+            "@type": "@id"
+        },
+        "member": {
+            "@type": "@id"
+        },
+        "dataSource": {
+            "@type": "@id"
+        },
+        "sourceSelector": {
+            "@type": "@id"
+        },
+        "annotation": {
+            "@type": "@id"
+        },
+        "renderOption": {
+            "@type": "@id"
+        }
+    }
 
 };

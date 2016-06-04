@@ -5,6 +5,7 @@ module.exports = {
     vtkFilesDirectory : "../../slicer/models/",
     jsonResultFileName : "../atlasStructure.json",
     jsonLDResultFileName : "../atlasStructureLD.json",
+    jsonHashResultFileName : "../atlasStructureHash.json",
     filesDisplayName : {
         "../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd" : "T1",
         "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd" : "T2",

@@ -2,14 +2,15 @@
 module.exports = {
    mrmlFileLocation : "../../slicer/brain-atlas.mrml",
     colorTableFileLocation : "../../slicer/colortables/hncma-atlas-lut.ctbl",
-    vtkFilesDirectory : "../../slicer/models/",
+    baseURL : "../../slicer/",
+    vtkFilesDirectory : "models/",
     jsonResultFileName : "../atlasStructure.json",
     jsonLDResultFileName : "../atlasStructureLD.json",
     jsonHashResultFileName : "../atlasStructureHash.json",
     filesDisplayName : {
-        "../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd" : "T1",
-        "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd" : "T2",
-        "../../slicer/volumes/labels/hncma-atlas.nrrd" : "Label Map",
+        "volumes/imaging/A1_grayT1-1mm_resample.nrrd" : "T1",
+        "volumes/imaging/A1_grayT2-1mm_resample.nrrd" : "T2",
+        "volumes/labels/hncma-atlas.nrrd" : "Label Map",
     },
     header : {
         "@type": "Header",
@@ -25,14 +26,14 @@ module.exports = {
         "root" : []
     },
     labelMapFiles : [{ 
-        name : "../../slicer/volumes/labels/hncma-atlas.nrrd",
+        name : "volumes/labels/hncma-atlas.nrrd",
         includes : "*" 
     }/* exclude skin because it does not match the others volumes
     ,{ 
         name : "../../slicer/volumes/labels/skin.nrrd",
         includes : [3]
     }*/],
-    "backgroundImages" : ["../../slicer/volumes/imaging/A1_grayT1-1mm_resample.nrrd", "../../slicer/volumes/imaging/A1_grayT2-1mm_resample.nrrd"],
+    "backgroundImages" : ["volumes/imaging/A1_grayT1-1mm_resample.nrrd", "volumes/imaging/A1_grayT2-1mm_resample.nrrd"],
     "@context" : { // for JSON LD compatibility, specify places where aplication expect a reference
         "@vocab": "http://www.openanatomy.org/schema/v1/#",
         "backgroundImage": {

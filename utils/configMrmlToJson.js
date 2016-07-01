@@ -1,8 +1,8 @@
 //all the path given relatively to mrmlToJson.js script
 module.exports = {
-   mrmlFileLocation : "../../slicer/brain-atlas.mrml",
-    colorTableFileLocation : "../../slicer/colortables/hncma-atlas-lut.ctbl",
-    baseURL : "../../slicer/",
+   mrmlFileLocation : "../slicer/brain-atlas.mrml",
+    colorTableFileLocation : "../slicer/colortables/hncma-atlas-lut.ctbl",
+    baseURL : "../slicer/",
     vtkFilesDirectory : "models/",
     jsonResultFileName : "../atlasStructure.json",
     jsonLDResultFileName : "../atlasStructureLD.json",
